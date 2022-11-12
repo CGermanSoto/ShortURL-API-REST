@@ -19,12 +19,13 @@ const hbs = create({
 
 app.engine('.hbs', hbs.engine)
 app.set('view engine', '.hbs')
-app.set('views', './views')
+app.set('views', './views');
 // Fin de configuraciones de handlebars
 
 
 // Middlewares
-app.use(express.static('public'))
+app.use(express.static('public'));
+app.use(express.urlencoded({extended: true}))
 
 // Routes
 app.use('/', shortURL)

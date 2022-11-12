@@ -1,12 +1,12 @@
-    <div class="card mb-2">
-        <div class="card-header">
-            ID: 1245AS5QQ2XVHF
-        </div>
-        <div class="card-body">
-            <h5 class="card-title">{{this.origin}}</h5>
-            <p class="card-text">{{this.shortURL}}</p>
-            <a href="#" class="btn btn-danger">eliminar</a>
-            <a href="#" class="btn btn-primary">editar</a>
-            <a href="#" class="btn btn-primary">copiar</a>
-        </div> 
+<div class="card mb-2">
+    <div class="card-header">
+        <p><strong>ID:</strong> {{this._id}}</p>
     </div>
+    <div class="card-body">
+        <h5 class="card-title">{{this.origin}}</h5>
+        <p class="card-text">{{this.shortURL}}</p>
+        <a href="/eliminar/{{this._id}}" class="btn btn-danger">eliminar</a>
+        <a href="/editar/{{this._id}}" class="btn btn-primary">editar</a>
+        <button data-short="{{this.shortURL}}" class="btn btn-primary">copiar</button>
+    </div> 
+</div> 
